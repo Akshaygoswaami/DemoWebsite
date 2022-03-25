@@ -1,0 +1,178 @@
+﻿//
+// Application Level Variables
+//
+
+@mode: default;
+
+// Colors
+@body-bg-color: if((@mode = dark), black, white);
+@border-color: if((@mode = dark), white, black);
+@hr-color: if((@mode = dark), white, black);
+@component-bg-color: if((@mode = dark), #505050, #073D8F);
+@component-text-color: if((@mode = dark), lightgrey, white);
+@alternate-text-color: if((@mode = dark), white, black);
+@inline-icon-color: if((@mode = dark), white, grey);
+@icon-color: white;
+@hover-color: lightyellow;
+@highlight-color: yellow;
+
+
+// Dimensions
+@xs-dim: 2px;
+@sm-dim: 5px;
+@md-dim: 10px;
+@lg-dim: 20px;
+@xl-dim: 50px;
+
+@icon-base-font-size: (@xs-dim * 9);
+@btn-text-font-size: (@xs-dim * 5.625);
+
+//Effects
+@collapse-transition-time: 0.1s;
+@transform-scale: 1.2;
+@link-text-decoration: none;
+
+// Mixins
+.transform-scale() {
+    transform: scale(@transform-scale);
+}
+
+.component-appearance() {
+    background-color: @component-bg-color;
+    color: @component-text-color;
+}
+
+//
+/* :::::::: main.css :::::::: */
+//
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.full-site {
+    background-color: @body-bg-color;
+    min-height: 100%;
+}
+
+.header-section {
+    //height: 5%; 
+}
+
+.main-section {
+    //min-height: 90%;
+}
+
+.footer-section {
+    height: 5%;
+}
+
+.home-pd-name-color-first {
+    color: #707070;
+}
+
+.home-pd-name-color-second {
+    color: #0000FF;
+}
+
+.home-inline {
+    font-size: 0;
+}
+
+.home-inline span {
+    font-size: 56px;
+}
+
+.navigation-inline {
+    font-size: 0;
+}
+
+.navigation-inline span {
+    font-size: 20px;
+}
+
+​
+.home-jumbotron {
+    margin-top: 30%;
+    margin-left: 5%;
+    height: 75%;
+    width: 85%;
+
+    @media screen and (max-width: 575.98px) {
+        margin-top: 15%;
+        margin-left: 1%;
+        height: 85%;
+        width: 100%
+    }
+
+    @media screen and (min-width: 576px) and (max-width: 799.98px) {
+        margin-top: 10%;
+        margin-left: 3%;
+        height: 85%;
+        width: 100%
+    }
+
+    @media screen and (min-width: 800px) and (max-width: 991.98px) {
+        margin-top: 10%;
+        margin-left: 3%;
+        height: 75%;
+        width: 105%
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1199.98px) {
+        margin-top: 10%;
+        margin-left: 3%;
+        height: 80%;
+        width: 115%
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 10%;
+        height: 75%;
+        width: 110%
+    }
+}
+
+.navbar--title {
+    //background-color: @component-bg-color;
+}
+
+.navbar--title__navbar-brand--white {
+    color: @component-text-color;
+
+    &:hover {
+        color: @hover-color;
+    }
+}
+
+.navbar--credit {
+    background-color: if((@mode = dark), darken(@component-bg-color,60%), lighten(@component-bg-color, 60%));
+    justify-content: center;
+    /*border-top: dashed;*/
+    border-width: @xs-dim;
+    border-color: @component-bg-color;
+}
+
+.navbar--credit__text {
+    color: @component-bg-color;
+
+    &:hover {
+        text-decoration: @link-text-decoration;
+        color: if((@mode = dark), lighten(@component-bg-color,30%), fade(@component-bg-color,70%));
+    }
+}
+
+.collapsing {
+    -webkit-transition: height @collapse-transition-time;
+    -moz-transition: height @collapse-transition-time;
+    -o-transition: height @collapse-transition-time;
+    transition: height @collapse-transition-time;
+}
+
+.main-section__hr {
+    /*border-top: (@xs-dim / 2) groove lighten(@alternate-text-color, 90%) !important;*/
+}
+
+.sub-section__hr {
+    border-top: (@xs-dim / 2) solid fade(@alternate-text-color, 10%) !important;
+}

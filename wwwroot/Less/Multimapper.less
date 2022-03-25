@@ -1,0 +1,137 @@
+﻿
+    @border: 1px #00000020 solid;
+    @padding: 5px;
+
+    .Enrichment {
+        border: @border;
+        border-radius: 10px;
+        height: 450px;
+    }
+
+    .EnrichContainer__SourceSearchBar {
+        border-right: @border;
+        padding: @padding;
+
+        .EnrichContainer__SourceName {
+            margin-left: 15px;
+        }
+    }
+
+    .EnrichContainer__SourceList {
+        height: 250px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        border-right: @border;
+        border-top: @border;
+        padding: 20px;
+
+        .EnrichContainer__SourceList__item {
+            margin-left: 5px;
+        }
+    }
+
+        .EnrichContainer__icon {
+            padding-left: 5px;
+            position: absolute;
+            left: 22px;
+            top: 35px;
+        }
+
+        #sourceSearchTextTable {
+            padding-left: 25px;
+        }
+
+        #destSearchTextTable {
+            padding-left: 25px;
+        }
+
+        #sourceSearchTextColumn {
+            padding-left: 25px;
+        }
+
+        #destSearchTextColumn {
+            padding-left: 25px;
+        }
+
+        #SourceId {
+                margin-bottom: 0.5rem;
+                display : block;
+        }
+
+        #DestinationId {
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        #EnrichId {
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+.EnrichContainer__DestSearchBar {
+    border-bottom: @border;
+    padding: @padding;
+
+    .EnrichContainer__DestName {
+        margin-left: 15px;
+    }
+}
+
+    .EnrichContainer__DestList {
+        height: 250px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        margin-left: 10px;
+        margin: 0px;
+        padding: 20px;
+
+        .EnrichContainer__DestList__item {
+            margin-left: 5px;
+        }
+    }
+
+    .Enrichment__SourceCol {
+        margin-left: 5px;
+    }
+
+    .Enrichment__DestCol {
+        margin-left: -25px;
+    }
+
+    .button__makepair--Enrichment {
+        margin-left: 20px;
+        margin-top: 5px;
+
+        &:hover {
+            background-color: #0953c3;
+        }
+    }
+
+    .chkbox__Automap--Enrichment {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .chkbox__Automap-label {
+        margin-left: 5px;
+    }
+
+
+    .Pairs {
+        margin-top: 10px;
+        border: 1px #00000020 solid;
+        border-radius: 10px;
+
+        .pairs__card__body {
+            border-bottom: 1px #00000020 solid;
+        }
+    }
+
+    .cancel__icon {
+        color: red;
+    }
+
+    .Error__message {
+        color: orange;
+    }
+
